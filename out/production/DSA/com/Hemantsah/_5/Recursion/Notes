@@ -1,0 +1,12 @@
+#1. Recursion helps us in solving bigger/complex problems in a simple way. We can convert recursion soln into iteration and vice-versa.
+#2. Two types:
+       1. Linear Recursion(Fibonacci Series): F(n) = F(n-1) + F(n-2)
+       2. Divide & Conquer Recursion(Binary Search): F(n) = F(n/2) + O(1)
+
+#3. Questions:
+              1. Basic Recursion Questions
+              2. Array Questions
+              3. Pattern and Sorting Questions
+              4. Recursion Subset, Subsequence, String, Questions
+              5. Recursion Permutations Questions
+              6. Good/Better Recursion Questions

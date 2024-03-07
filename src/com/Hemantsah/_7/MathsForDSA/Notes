@@ -1,0 +1,26 @@
+#1. 5-operators:
+      1.AND
+      2.OR
+      3.XOR
+      4.Complement
+      5.Left Shift operator
+      6.Right Shift Operator
+
+#2. 1. i-th bit of a number(using masking)
+    2. set bit, reset bit
+    3. negative of number(2's complement)
+    4. Range of Numbers
+    5. No. of digits in base b
+    6. Seive of eratosthenes
+    7. sq root(another method Newton Raphson method)
+    8. Euclid's Algorithm
+    9. Other things:
+        1. Tayler series
+        2. Euler product formula
+        3. Harmonic Series
+        4. p&c
+        5. Fermat Theorem
+        6. Chinese Reminder Theorem
+
+#3. 1. (n & n-1)===0 => power of 2
+    2. (int)((log(n) / log(b)) + 1  => gives no. of digits in base b
