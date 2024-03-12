@@ -10,3 +10,10 @@
               4. Recursion Subset, Subsequence, String, Questions
               5. Recursion Permutations Questions
               6. Good/Better Recursion Questions
+
+#4. Some imp. things:
+            1. str.startsWith("app")
+            2. str.isEmpty()
+            3. str.substring(1)
+            4. ArrayList<Integer>inner = new ArrayList<>(outer.get(i)); //outer.get(i): create the copy of outer ArrayList element into inner ArrayList
+            5.

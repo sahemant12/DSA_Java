@@ -5,8 +5,25 @@
 
 #3. Questions:
               1. Basic Recursion Questions
+                    (i). Sum Of Digits
+                    (ii). Reverse a number
+                    (iii). Fibonacci Series
               2. Array Questions
+                    (i). Array Sorted or not
               3. Pattern and Sorting Questions
-              4. Recursion Subset, Subsequence, String, Questions
-              5. Recursion Permutations Questions
+                    (i). sorting using recursion
+              4. Recursion Subset, Subsequence, String, Questions(Processed and unprocessed)
+                    (i). skip a character
+                    (ii). Subsequence
+                    (iii). Subsequence using iterative
+              5. Recursion Permutations Questions(all combination)
+                    (i). Permutations
               6. Good/Better Recursion Questions
+                    (i). Phone Book-Leetcode-17
+                    (ii). Dice Element Sum
+
+#4. Some imp. things:
+            1. str.startsWith("app")
+            2. str.isEmpty()
+            3. str.substring(1)
+            4. ArrayList<Integer>inner = new ArrayList<>(outer.get(i)); //outer.get(i): create the copy of outer ArrayList element into inner ArrayList
