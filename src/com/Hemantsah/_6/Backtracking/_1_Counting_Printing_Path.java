@@ -5,9 +5,9 @@ import java.util.ArrayList;
 public class _1_Counting_Printing_Path {
     public static void main(String[] args) {
 //        System.out.println(countPath(3,3));
-//        printPath("",3,3);
+        printPath("",3,3);
 //        System.out.println(printPathReturn("",3,3));
-        System.out.println(printPathDiagonalReturn("",3,3));
+//        System.out.println(printPathDiagonalReturn("",3,3));
     }
 
     private static ArrayList<String> printPathDiagonalReturn(String p, int r, int c) {
