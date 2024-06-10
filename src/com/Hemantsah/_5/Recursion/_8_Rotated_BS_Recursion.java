@@ -3,7 +3,7 @@ package com.Hemantsah._5.Recursion;
 public class _8_Rotated_BS_Recursion {
     public static void main(String[] args) {
         int[] arr = {10, 12,15,15,16, 2, 4, 5, 7, 8, 9};
-        int target = 0;
+        int target = 5;
         System.out.println(RBS_recursion(arr, target));
     }
 

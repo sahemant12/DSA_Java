@@ -119,6 +119,77 @@ public class _1_SinglyLL {
         System.out.println("END");
     }
 
+
+
+
+
+
+    //Insertion using Recursion
+    public void RecursiveInsertion(int index, int val){
+      head = RecursiveInsertion(index, val, head);
+    }
+public Node RecursiveInsertion(int index, int val, Node temp){
+    if(index==0){
+        Node node = new Node(val,temp);
+        size++;
+        return node;
+    }
+    temp.next = RecursiveInsertion(index-1,val,temp.next);
+    return temp;
+}
+
+
+
+//Empty Node
+    public void dummy(){
+        Node dummyNode = new Node();
+        Node temp = dummyNode;
+        System.out.println("Hello:"+ dummyNode);
+        System.out.println("olleh:"+ temp);
+    }
+
+
+
+
+// For cyclic insertion
+    public void insertAndFormCycle(int val, int position){ // Form cycle
+//        if(position == 1){
+//            insertFirst(val);
+//            return;
+//        }
+//        if(position == size+1){
+//            insertLast(val);
+//            return;
+//        }
+        Node temp = head;
+        while(position>1){
+            temp=temp.next; // temp is that position where we want to form cycle
+            position--;
+        }
+        Node node = new Node(val);
+        tail.next = node;
+        node.next=temp;
+        size++;
+    }
+
+    public int lengthOfCycle() {  //calculating length of cycle
+
+        Node fpointer = head;
+        Node spointer = head;
+        while(fpointer!=null && fpointer.next!=null){
+            fpointer = fpointer.next.next;
+            spointer = spointer.next;
+            if(fpointer==spointer){
+                spointer=spointer.next;  //we can also use do while loop
+                int count=1;
+                while(fpointer!=spointer){
+                    count++;
+                }
+                return count;
+            }
+        }
+        return 0;
+    }
     private class Node{
         private int val;
         private Node next;
@@ -126,6 +197,9 @@ public class _1_SinglyLL {
         public Node(int val) {
 
             this.val = val;
+        }
+        public Node(){
+
         }
 
         public Node(int val, Node next) {
