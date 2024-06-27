@@ -8,6 +8,26 @@ public class _1_SinglyLL {
     public _1_SinglyLL() {
         this.size=0;
     }
+
+    private class Node{
+        private int val;
+        private Node next;
+
+        public Node(int val) {
+
+            this.val = val;
+        }
+        public Node(){
+
+        }
+
+        public Node(int val, Node next) {
+            this.val = val;
+            this.next = next;
+        }
+
+    }
+
     public void insertFirst(int val){ //O(1)
         Node node = new Node(val);
         node.next = head;
@@ -190,22 +210,5 @@ public Node RecursiveInsertion(int index, int val, Node temp){
         }
         return 0;
     }
-    private class Node{
-        private int val;
-        private Node next;
 
-        public Node(int val) {
-
-            this.val = val;
-        }
-        public Node(){
-
-        }
-
-        public Node(int val, Node next) {
-            this.val = val;
-            this.next = next;
-        }
-
-    }
 }
