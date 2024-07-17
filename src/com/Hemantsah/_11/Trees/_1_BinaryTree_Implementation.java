@@ -71,4 +71,23 @@ public class _1_BinaryTree_Implementation { //BT has
 //            return;
 //        }
 //    }
+    public void buildBT(int[] arr){
+        for (int i = 0; i < arr.length; i++) {
+            root = buildBT(root, arr[i]);
+        }
+    }
+    private Node buildBT(Node node, int value){
+        if(node==null){
+            return new Node(value);
+        }
+        //left Insertion
+        if(node.left==null){
+            node.left = buildBT(node.left, value);
+        }
+        //right Insertion
+        if(node.right==null){
+            node.right = buildBT(node.right, value);
+        }
+        return root;
+    }
 }

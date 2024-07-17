@@ -41,7 +41,7 @@ public class _2_Main {
 //        bst.printInRange(3,9);
 //        bst.RootToLeafPath();
         int[] nums = {-10,-3,0,5,9};
-        System.out.println(bst.sortedArrayToBST(nums));
+//        System.out.println(bst.sortedArrayToBST(nums));
 
     }
 }

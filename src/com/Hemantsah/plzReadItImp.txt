@@ -1,0 +1,2 @@
+1. Learn TC and SC: Understand it fully.
+2. Learn How to convert Recursion into Iteration(using Stack) and vice versa.

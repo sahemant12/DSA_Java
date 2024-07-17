@@ -22,7 +22,7 @@ class hemant extends Student{
     }
 //
 //    public static void main(String[] args) {
-//        hemant obj1=new hemant();
+//        hemant obj1 = new hemant();
 //        obj1.display();
 //        obj1.input();
 //    }

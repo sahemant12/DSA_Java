@@ -13,7 +13,6 @@ public class _2_HashSet {
         set.add(24);
         System.out.println(set);
 
-
         //iterating each element
         Iterator<Integer> itr = set.iterator();
         while (itr.hasNext()) {

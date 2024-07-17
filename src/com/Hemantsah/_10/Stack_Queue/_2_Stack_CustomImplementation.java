@@ -7,7 +7,7 @@ public class _2_Stack_CustomImplementation {
    public _2_Stack_CustomImplementation(){
        this(DEFAULT_SIZE);
    }
-    public _2_Stack_CustomImplementation(int size) {
+     _2_Stack_CustomImplementation(int size) {
         this.data = new int[size];
     }
 

@@ -419,46 +419,22 @@ public int height(Node node){
         TreeInfo myInfo = new TreeInfo(myHeight, myDiameter);
         return myInfo;
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    public Node sortedArrayToBST(int[] nums) {
-        int s=0; int e=nums.length-1;
-//        Node root = null;
-        return arrValueInsertion(root,nums,s,e);
+    public boolean isPathExist(Node node, int[] arr){
+        if(node==null){
+            return arr.length==0;
+        }
+        return isPathExist(node, arr, 0);
     }
-    public Node arrValueInsertion(Node root, int[] nums, int s, int e){
-        if(s>e){
-            return root;
+    private boolean isPathExist(Node node, int[] arr, int i){
+        if(node==null){
+            return false;
         }
-        int mid = s+(e-s)/2;
-        root = buildBST(root,nums[mid]);
-        root.left = arrValueInsertion(root, nums, s, mid-1);
-        root.right = arrValueInsertion(root, nums, mid+1, e);
-        return root;
-    }
-
-    public Node buildBST(Node root, int value){
-        if(root==null){
-            return new Node(value);
+        if(node.value!=arr[i] || i>=arr.length){
+            return false;
         }
-        if(root.value>value){
-            root.left = buildBST(root.left, value);
+        if(node.left==null && node.right==null && i==arr.length-1){
+            return true;
         }
-        if(root.value<value){
-            root.right = buildBST(root.right, value);
-        }
-        return root;
+        return isPathExist(node.left, arr, i++) || isPathExist(node.right, arr, i++);
     }
 }
