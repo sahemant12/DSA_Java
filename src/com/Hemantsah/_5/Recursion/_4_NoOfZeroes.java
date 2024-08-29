@@ -18,8 +18,7 @@ public class _4_NoOfZeroes {
         }
         if(num%10==0){
             return NoOfZeroes(num/10,count+1);
-        }else{
-            return  NoOfZeroes(num/10,count);
         }
+            return  NoOfZeroes(num/10,count);
     }
 }

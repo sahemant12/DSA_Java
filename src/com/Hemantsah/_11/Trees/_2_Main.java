@@ -11,8 +11,8 @@ public class _2_Main {
 
 
         _3_BST_Implementation bst = new _3_BST_Implementation();
-//        int[] arr = {2,20,23,12,5,10,8};
-//        bst.populate(arr);
+        int[] arr = {8,5,10,3,6,11,14,1,4};
+        bst.populate(arr);
 //        bst.display();
 
 //        int[] arr = {1,2,3,4,5,6,7,8,9,10};
@@ -38,9 +38,10 @@ public class _2_Main {
 //        bst.inOrder();
 
         //printInRange
-//        bst.printInRange(3,9);
+        bst.printInRange(3,11);
+//        bst.inOrder();
 //        bst.RootToLeafPath();
-        int[] nums = {-10,-3,0,5,9};
+//        int[] nums = {-10,-3,0,5,9};
 //        System.out.println(bst.sortedArrayToBST(nums));
 
     }

@@ -1,2 +1,4 @@
+//Rest everything are completed, don't need to check.
 1. singleton class is left(Le-2: 1:10:00)
-2.
+2. Le-3: from 1:30:00 and move forward
+3. Later

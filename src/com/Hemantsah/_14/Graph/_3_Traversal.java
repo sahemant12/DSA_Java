@@ -1,6 +1,7 @@
 package com.Hemantsah._14.Graph;
 
 import java.util.LinkedList;
+import java.util.List;
 import java.util.Queue;
 import java.util.Stack;
 
@@ -77,4 +78,70 @@ public class _3_Traversal {
             }
         }
     }
+
+
+//Self Practice
+public void BFSPractice(int V, List<List<Integer>> adj){
+    boolean[] visitedNode = new boolean[V];
+    Queue<Integer> q = new LinkedList<>();
+    for(int i=0; i<V; i++){
+        if(!visitedNode[i]){
+            bfs(adj, i, visitedNode, q);
+        }
+    }
 }
+public void bfs(List<List<Integer>> adj, int src, boolean[] visitedNode, Queue<Integer> q){
+    visitedNode[src]=true;
+    q.add(src);
+    while(!q.isEmpty()){
+        int peek = q.poll();
+        for(int i:adj.get(peek)){
+            if(!visitedNode[i]){
+                q.offer(i);
+                visitedNode[i]=true;
+            }
+        }
+    }
+}
+
+    public void DFSPractice(int V, List<List<Integer>> adj){
+        boolean[] visitedNode = new boolean[V];
+        for(int i=0; i<V; i++){
+            if(!visitedNode[i]){
+                dfs(adj, i, visitedNode);
+            }
+        }
+    }
+    public void dfs(List<List<Integer>> adj, int src, boolean[] visitedNode){
+        visitedNode[src]=true;
+        System.out.println(src);
+        for(int i: adj.get(src)){
+            if(!visitedNode[i]){
+                dfs(adj, i, visitedNode);
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

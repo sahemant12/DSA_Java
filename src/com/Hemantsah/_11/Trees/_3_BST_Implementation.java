@@ -139,6 +139,8 @@ public class _3_BST_Implementation {
         inOrder(node.right);
     }
 
+
+    //Till Here
     //Level-Order Traversals
     public void levelOrder(){
         levelOrder(root);
@@ -172,6 +174,7 @@ public class _3_BST_Implementation {
             }
         }
     }
+
 //Search in BST:
     public boolean searchBST(int target){
         return searchBST(root, target);
@@ -237,21 +240,45 @@ public class _3_BST_Implementation {
     public void printInRange(int x, int y){
          printInRange(root, x,y);
     }
-    private void printInRange(Node node,int x, int y){ //TC: 0(H)
-        if(node==null){
-             return;
-        }
-        if(x<=node.value && y>=node.value){
-            printInRange(node.left,x,y);
-            printInRange(node.right,x,y);
-            System.out.println(node.value);
-
-        }else if(x>node.value){
-             printInRange(node.right, x,y);
-        }else if(y<node.value){
-             printInRange(node.left, x,y);
-        }
+//    private void printInRange(Node node,int x, int y){ //TC: 0(H)
+//        if(node==null){
+//             return;
+//        }
+//        if(x<=node.value && y>=node.value){
+//            printInRange(node.left,x,y);
+//            printInRange(node.right,x,y);
+//            System.out.println(node.value);
+//
+//        }else if(x>node.value){
+//             printInRange(node.right, x,y);
+//        }else if(y<node.value){
+//             printInRange(node.left, x,y);
+//        }
+//    }
+private void printInRange(Node node,int x, int y){ //TC: 0(H)
+    if(node==null){
+        return;
     }
+    if(node.value==x){
+       //inorderTraversal
+        inOrderTraversal(node,y);
+        return;
+    }
+    printInRange(node.left,x,y);
+    printInRange(node.right,x,y);
+}
+private void inOrderTraversal(Node node, int y){
+        if(node==null){
+            return;
+        }
+        if(node.value==y){
+            System.out.println("last"+" "+node.value);
+            return;
+        }
+    inOrderTraversal(node.left, y);
+    System.out.print(node.value+" ");
+    inOrderTraversal(node.right, y);
+}
 
 //Root to Leaf Path
     public void RootToLeafPath(){
@@ -272,6 +299,7 @@ public class _3_BST_Implementation {
         }
         list.remove(list.size()-1);
     }
+
 
     //KK BT/BST Ques:
     public int levelOrder(Node root, int key) {

@@ -13,16 +13,14 @@ public class _10_BubbleSort_Recursion {
         if(i==arr.length){
             return arr;
         }
-        if(j<arr.length-1){
+        if(j<arr.length-1-i){
             if(arr[j]>arr[j+1]){
                 //swap
                 int temp=arr[j];
                 arr[j]=arr[j+1];
                 arr[j+1]=temp;
-                return BubbleSort_Recursion(arr,i,j+1);
-            }else{
-                return BubbleSort_Recursion(arr,i,j+1);
             }
+            return BubbleSort_Recursion(arr,i,j+1);
         }else{
             return BubbleSort_Recursion(arr,i+1,0);
         }

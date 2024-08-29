@@ -5,9 +5,9 @@ public class _13_skip_character {
         String str="applehello";
         String ans="";
 //        System.out.println(SkipCharacter(str,ans)); //Approach1
-//        System.out.println(SkipCharacter_approach2(str));
-//        System.out.println(SkipApple(str));
-        System.out.println(SkipAppNotApple(str));
+//        System.out.println(SkipCharacter_approach2("baccad"));
+        System.out.println(SkipApple(str));
+//        System.out.println(SkipAppNotApple(str));
 
     }
 
@@ -36,15 +36,25 @@ public class _13_skip_character {
     }
 
     private static String SkipCharacter_approach2(String str) { //Approach2
+//        if(str.isEmpty()){
+//            return "" ;
+//        }
+//        char ch = str.charAt(0);
+//        if(ch=='a'){
+//            return SkipCharacter_approach2(str.substring(1));
+//        }else{
+//            return ch + SkipCharacter_approach2(str.substring(1));
+//        }
+
+        //Another my approach
         if(str.isEmpty()){
-            return "" ;
+            return "";
         }
-        char ch = str.charAt(0);
-        if(ch=='a'){
-            return SkipCharacter_approach2(str.substring(1));
-        }else{
-            return ch + SkipCharacter_approach2(str.substring(1));
+        String ans  = SkipCharacter_approach2(str.substring(1));
+        if(str.charAt(0)=='a'){
+            return ans;
         }
+        return str.charAt(0)+ans;
     }
 
     private static String SkipCharacter(String str, String ans) {
