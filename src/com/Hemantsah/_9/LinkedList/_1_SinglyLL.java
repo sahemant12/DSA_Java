@@ -158,8 +158,6 @@ public Node RecursiveInsertion(int index, int val, Node temp){
     return temp;
 }
 
-
-
 //Empty Node
     public void dummy(){
         Node dummyNode = new Node();
@@ -167,7 +165,15 @@ public Node RecursiveInsertion(int index, int val, Node temp){
         System.out.println("Hello:"+ dummyNode);
         System.out.println("olleh:"+ temp);
     }
-
+    private Node insertionUsingRecursion(int val, int index, Node node){
+        if(index==0){
+            Node newNode = new Node(val,node);
+            size+=1;
+            return newNode;
+        }
+        node.next = insertionUsingRecursion(val, index-1, node.next);
+        return node;
+    }
 
 
 

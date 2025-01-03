@@ -77,53 +77,84 @@ class SinglyLinkedList{
 
 
 
-    public void deleteFirst(int value){
+    public int deleteFirst(){
         if(head==null){
-            return;
+            return -1;
         }
+        int val = head.value;
        Node temp = head;
        head = head.next;
        temp.next = null;
         size-=1;
-    }
-    public void deleteLast(int value){
         if(head==null){
-            insertFirst(value);
-            return;
+            tail=null;
         }
-        //using tail
-//        Node node = new Node(value);
-//        node.next = null;
-//        tail.next = node;
-//        tail = node;
-//        size+=1;
-
-        //w/o tail
-        Node node = new Node(value);
-        node.next = null;
-        Node temp = head;
-        while(temp.next!=null){
-            temp=temp.next;
-        }
-        temp.next = node;
-        tail=node;
-        size+=1;
+        return val;
+    }
+    public int deleteLast(){
+      if(head==null){
+          return -1;
+      }
+      Node temp = head;
+      while(temp.next.next!=null){
+          temp=temp.next;
+      }
+      int val = temp.next.value;
+      temp.next = null;
+      tail = temp;
+      size-=1;
+      return val;
     }
 
-    public void deleteBetween(int value, int position){
+    public int deleteBetween(int position){
         if(position==1){
-            insertFirst(value);
-            return;
+            return deleteFirst();
         }
         if(position==size){
-            insertLast(value);
+            return deleteLast();
+        }
+       Node preNode = getPreNode(position);
+        Node temp = preNode.next;
+        preNode.next = temp.next;
+        int val = temp.value;
+        temp.next = null;
+        size-=1;
+        return val;
+    }
+
+    public Node findNode(int val){
+        Node temp = head;
+        while(temp!=null){
+            if(val==temp.value){
+                return temp;
+            }
+            temp = temp.next;
+        }
+        return null;
+    }
+
+    //Insertion using Recursion: Perfect, it works
+    public void insertionUsingRecursion(int value, int position){
+        insertionUsingRecursion(value, position, head);
+    }
+    public void insertionUsingRecursion(int value, int position, Node node){
+        if(node==null){
             return;
         }
-        Node node = new Node(value);
-        Node preNode = getPreNode(position);
-        Node temp = preNode.next;
-        preNode.next = node;
-        node.next = temp;
-        size+=1;
+        if(position==1){
+            Node newNode = new Node(value);
+            newNode.next = head;
+            head = newNode;
+            size+=1;
+            return;
+        }
+        if(position==2){
+            Node newNode = new Node(value);
+            newNode.next = node.next;
+            node.next = newNode;
+            size+=1;
+            return;
+        }
+        insertionUsingRecursion(value, position-1, node.next);
     }
 }

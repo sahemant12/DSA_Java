@@ -96,7 +96,6 @@ class p{
 
 //4. final keyword: It is used to restrict the User to change (i) variable value (ii) method overridding (iii) class inheritance
 
-
 //5. finalize() not keyword. It is method: which is called by the garbage collector before an object is destroyed. The purpose of finalize() is to released the resources that are allocated by unused object such as closing files, releasing memory, etc.
 
 //6. finally: It is a block, which is used with try-catch block. It always get executed.

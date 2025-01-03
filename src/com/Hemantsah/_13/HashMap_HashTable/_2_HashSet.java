@@ -14,10 +14,13 @@ public class _2_HashSet {
         System.out.println(set);
 
         //iterating each element
-        Iterator<Integer> itr = set.iterator();
-        while (itr.hasNext()) {
-            int element = itr.next();
-            System.out.println(element);
+//        Iterator<Integer> itr = set.iterator();
+//        while (itr.hasNext()) {
+//            int element = itr.next();
+//            System.out.println(element);
+//        }
+        for(int i:set){
+            System.out.println(i);
         }
     }
 }
